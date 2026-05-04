@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)file:///C:/lapuhapo/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lakewood, Zamboanga Sibugay</title>
+
+<!-- AESTHETIC FONTS -->
+<link href="./index_files/css2" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b1c2c;
+color:white;
+padding-top:70px;
+}
+
+/* NAVIGATION */
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 8%;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+z-index:999;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.circle{
+width:40px;
+height:40px;
+border-radius:50%;
+background:linear-gradient(45deg,#00c6ff,#0072ff);
+}
+
+.logo-text{
+line-height:1.1;
+}
+
+.logo-text .main{
+font-size:14px;
+font-weight:700;
+}
+
+.logo-text .sub{
+font-size:11px;
+opacity:0.8;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:14px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00c6ff;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.55);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:800px;
+}
+
+.hero h1{
+font-size:70px;
+letter-spacing:2px;
+}
+
+.hero p{
+margin-top:10px;
+opacity:0.9;
+}
+
+/* BUTTON */
+.btn{
+margin-top:20px;
+display:inline-block;
+padding:10px 25px;
+background:#00c6ff;
+color:black;
+border-radius:25px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+background:#fff;
+}
+
+/* SECTION */
+section{
+padding:70px 10%;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+padding:20px;
+border-radius:15px;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:rgba(0,198,255,0.15);
+}
+
+/* =========================
+   ✨ AESTHETIC HEADINGS
+========================= */
+
+h2{
+font-family:'Playfair Display', serif;
+text-align:center;
+margin-bottom:30px;
+font-size:36px;
+letter-spacing:3px;
+text-transform:uppercase;
+position:relative;
+font-weight:700;
+}
+
+h2::after{
+content:"";
+display:block;
+width:70px;
+height:4px;
+background:linear-gradient(90deg,#00c6ff,#0072ff);
+margin:12px auto 0;
+border-radius:10px;
+}
+
+section h2{
+padding-left:15px;
+border-left:5px solid #00c6ff;
+display:inline-block;
+}
+
+/* TOURIST */
+.tourist{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.place{
+height:180px;
+border-radius:15px;
+overflow:hidden;
+position:relative;
+cursor:pointer;
+}
+
+.place img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:0.4s;
+}
+
+.place:hover img{
+transform:scale(1.2);
+}
+
+.place span{
+position:absolute;
+bottom:10px;
+left:10px;
+background:rgba(0,0,0,0.6);
+padding:5px 10px;
+border-radius:10px;
+}
+
+/* OFFICIALS */
+.slider-box{
+background:rgba(255,255,255,0.06);
+border-radius:20px;
+padding:20px;
+overflow-x:auto;
+display:flex;
+gap:15px;
+scroll-snap-type:x mandatory;
+}
+
+.official{
+min-width:180px;
+background:rgba(0,198,255,0.15);
+padding:15px;
+border-radius:15px;
+text-align:center;
+scroll-snap-align:center;
+transition:0.3s;
+}
+
+.official:hover{
+transform:scale(1.05);
+}
+
+.official img{
+width:80px;
+height:80px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:10px;
+}
+
+/* CONTACT */
+.contact-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center;
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+height:150px;
+object-fit:cover;
+border-radius:15px;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.08);
+}
+
+/* FOOTER */
+.footer{
+text-align:center;
+padding:20px;
+background:#06131f;
+margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+<div class="logo">
+<div class="circle"></div>
+<div class="logo-text">
+<div class="main">Lakewood</div>
+<div class="sub">Zamboanga Del Sur</div>
+</div>
+</div>
+
+<div>
+<a href="file:///C:/lapuhapo/index.html#home">Home</a>
+<a href="file:///C:/lapuhapo/index.html#about">About</a>
+<a href="file:///C:/lapuhapo/index.html#discover">Tourist</a>
+<a href="file:///C:/lapuhapo/index.html#officials">Officials</a>
+<a href="file:///C:/lapuhapo/index.html#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+<div class="hero-content">
+<h1>LAKEWOOD</h1>
+<p>PROVINCE OF ZAMBOANGA DEL SUR</p>
+<p>PHILIPPINES</p>
+<p>Zamboanga Del Sur | Gateway to Nature and Beauty</p>
+<a href="file:///C:/lapuhapo/index.html#discover" class="btn">Explore Now</a>
+</div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+<h2>About the Municipality</h2>
+
+<div class="card" style="text-align:center;max-width:900px;margin:auto;">
+<p>Lakewood is a peaceful coastal municipality known for nature and culture.</p>
+
+<h3 style="font-size:34px;letter-spacing:3px;text-transform:uppercase;margin-top:10px;color:#00c6ff;">
+WELCOME TO LAKEWOOD
+</h3>
+
+<p>Where nature, culture, and simplicity come together in harmony.</p>
+</div>
+</section>
+
+<!-- PROFILE -->
+<section>
+<h2>Municipal Profile</h2>
+<div class="grid">
+<div class="card"><h3>Classification</h3><p>3rd Class Municipality</p></div>
+<div class="card"><h3>District</h3><p>Zamboanga Del Sur</p></div>
+<div class="card"><h3>Barangays</h3><p>15+</p></div>
+<div class="card"><h3>Language</h3><p>Bisaya, Chavacano</p></div>
+</div>
+</section>
+
+<!-- TOURIST -->
+<section id="discover">
+<h2>Tourist Attractions</h2>
+<div class="tourist">
+<div class="place"><img src="717bf101-f1b0-4310-b8bf-a142427ebf33.jpg"><span>VILLA INNOCENTES RESORT</span></div>
+<div class="place"><img src="414272f0-2ae5-4093-b98a-e5784185ea1b.jpg"><span>MEGURANAO PEAK</span></div>
+<div class="place"><img src="d2921c3a-306f-4934-aaa5-5c297d87111c.jpg"><span>ALINDAHAW LAKE VIEW RESORT</span></div>
+<div class="place"><img src="bf0299ff-e2a6-480b-99da-6d2e6b6fa917.jpg"><span>LAKEWOOD</span></div>
+</div>
+</section>
+
+<div class="grid">
+
+<div class="card">
+<h3>VILLA INNOCENTES RESORT</h3>
+<p>A peaceful resort good for swimming and family relaxation.</p>
+</div>
+
+<div class="card">
+<h3>MEGURANAO PEAK</h3>
+<p>A mountain spot with nice views and fresh air.</p>
+</div>
+
+<div class="card">
+<h3>ALINDAHAW LAKE VIEW RESORT</h3>
+<p>A calm lake resort perfect for relaxing and enjoying nature.</p>
+</div>
+
+<div class="card">
+<h3>LAKEWOOD</h3>
+<p>Preservation of Bisaya traditions, storytelling, and indigenous customs.</p>
+</div>
+
+</div>
+<!-- OFFICIALS -->
+<section id="officials">
+<h2>Municipal Government of Lakewood</h2>
+
+<div class="slider-box">
+
+<div class="official"><img src="9fd88936-8694-4c8b-8772-e83dabae5557.jpg"><p>MAYOR</p><p>HON. DOMINGO V. MIRRAR</p></div>
+<div class="official"><img src="af02c9cd-0df0-42a4-83a2-e485d4d05f1f.jpg"><p>VICE MAYOR</p><p>HON. ARNEL B. PANO</p></div>
+<div class="official"><img src="a04989b8-61be-4319-8ba5-93e40a348441.jpg"><p>SB MEMBER</p><p>HON. PEPE SUGUE</p></div>
+<div class="official"><img src="08900ef8-87f1-4fcb-a37b-93e763d14698.jpg"><p>SB MEMBER</p><p> HON. JAIME YURONG</p></div>
+<div class="official"><img src="0a6907ae-c8e0-4661-9279-141b4b796b29.jpg"><p>SB MEMBER</p><p>HON. RICHARD BAHIHIT</p></div>
+<div class="official"><img src="dc1964b5-05d3-4349-9fbe-8d601ddb5fb4.jpg"><p>SB MEMBER</p><p>HON. CATALINA  DURAN</p></div>
+<div class="official"><img src="e8f4d55f-befe-4a6b-a212-9b821ef081bb.jpg"><p>SB MEMBER</p><p>HON. RONALD0 P. LOOC</p></div>
+<div class="official"><img src="dd82c51f-49df-4e9e-afb0-4bc1016f7b99.jpg"><p>SB MEMBER</p><p>HON. NILO CALANDA</p></div>
+<div class="official"><img src="c8588786-e0c6-4ce0-a013-f242e96f0cac.jpg"><p>SB MEMBER</p><p>HON. DIOSDADO MAG-ASO</p></div>
+<div class="official"><img src="1323f463-80bc-4c9b-9008-90746b1fb705.jpg"><p>SB MEMBER</p><p>HON. KLOSTERIS SACAL</p></div>
+</div>
+</section>
+
+<!-- LGU -->
+<section>
+<h2>Reach the LGU</h2>
+<div class="card" style="text-align:center;">
+<h3>Municipal Government of Lakewood</h3>
+<p>Public service and community support.</p>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section>
+<h2>Photo Gallery of Lakewood</h2>
+<div class="gallery">
+<img src="a6f7b8e6-9d9f-42b2-9127-03ecdc97aaf9.jpg">
+<img src="efbc7045-6fbc-4f46-9ec7-16b29cb52c53.jpg">
+<img src="84ad8006-1b79-4325-a18f-2bd9ba57a533.jpg">
+<img src="a8c6c1e2-b0d6-4e03-ab5a-6913a3431c28.jpg">
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Get In Touch</h2>
+<div class="contact-box">
+<div class="card">Location: Lakewood</div>
+<div class="card">Phone: 0912-345-6789</div>
+<div class="card">Email: alicia@gmail.com</div>
+<div class="card">Social: gl-lakewood</div>
+</div>
+</section>
+
+<div class="footer">
+© 2026 Lakewood, Zamboanga Sibugay
+</div>
+</section></body></html>
